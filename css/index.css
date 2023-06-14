@@ -1,0 +1,92 @@
+body{
+    background-image: linear-gradient(to bottom right, #10989b, #3effd8);
+
+    /* position: relative; */
+}
+.signup-body,
+.issued-body,
+.borrowed-body,
+.userProfile{
+    height: 100vh;
+}
+
+.navbar .profile-pic{
+    width: 3.4em;
+}
+
+.navbar .nav-item{
+    font-size: 20px;
+    font-weight: bold;
+    color: darkcyan;
+}
+
+.navbar #firstName{
+    font-size: 20px;
+    font-weight: bold;
+    color: darkcyan;
+}
+
+.navbar #userName{
+    font-size: 12px;
+    color: cadetblue;
+}
+/* body{
+    background-color: black;
+    color: #fff;
+} */
+
+#chooseFile{
+    width: 15em;
+}
+input{
+    background-color: transparent;
+    border-radius: 0px;
+    border: 0px solid;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    width: 90%;
+}
+
+input::placeholder{
+    color: #fff;
+}
+
+input:focus{
+    outline: none !important;
+}
+
+.chatUser{
+    cursor: pointer;
+}
+
+#shareProfile,
+#chatWith{
+    width:3rem;
+}
+.profileBody .detailsBody{
+    width: 20rem;
+}
+
+#isDeleted .undefiendUser{
+    font-size: 3rem;
+    color: darkcyan;
+}
+
+#gender input{
+    width: 1rem;
+    color:aqua;
+    margin: 0 0.5rem;
+}
+@media only screen and (max-width: 767px) {
+    .profileBody .profilePic{
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+    #shareProfile{
+        margin-top: 3rem;
+        
+    }
+    #chatWith{
+        margin-bottom: 3rem;
+    }
+}

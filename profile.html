@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+  <!-- navebar -->
+  <nav class="navbar bg-body-tertiary">
+    <div class="container w-75">
+        <a class="navbar-brand">Let's Chat</a>
+        <div class="d-flex justify-content-end align-items-center" role="search">
+            <a href="chat.html" class="nav-link me-3 nav-item" aria-current="page"><i class="fa-solid fa-comments"></i></a>
+            <div class="border ps-2 pe-2 rounded-2 shadow-sm d-flex justify-content-end align-items-center">
+              <div class="text-end">
+                  <a class="nav-link me-3" aria-current="page" href="profile.html" id="firstName"></a>
+                  <a class="nav-link me-3" aria-current="page" href="profile.html" id="userName"></a>
+              </div>
+              <img alt="avatar" id="userPic" class="rounded-circle profile-pic">
+            </div>
+        </div>
+        
+    </div>
+  </nav>
+
+  <div class="profile-body container w-75">
+    <div class="row d-flex justify-content-center align-items-center m-auto text-center">
+        <img class="w-25 mt-2 rounded-circle" alt="profile-photo" id="profilePicUpdate">
+      
+      <form class="m-4 d-flex align-items-center justify-content-center" id="uploadForm">
+          <input type="file" name="image" accept="image/*" id="chooseFile" class="btn btn-secondary border-light text-start">
+          <button type="submit" id="uploadProfilePic" class="btn btn-info border-light ms-2"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+      </form>
+
+      <div class="w-50 text-start border rounded m-auto">
+      
+          <div class="row border-bottom d-flex align-items-center">
+            <h6 class="col-md-4 mb-2 mt-2">First Name :</h6>
+            <p class="col-md-4 ps-2 mb-2 mt-2 pChange" id="firstNameContent"></p>
+            <input id="firstNameInput" class="col-md-4 d-none inputChange">
+          </div>
+          <div class="row border-bottom d-flex align-items-center">
+            <h6 class="col-md-4 mb-2 mt-2">Last Name :</h6>
+            <p class="col-md-4 ps-2 mb-2 mt-2 pChange" id="lastNameContent"></p>
+            <input id="lastNameInput" class="col-md-4 d-none inputChange">
+          </div>
+          <div class="row border-bottom d-flex align-items-center">
+            <h6 class="col-md-4 mb-2 mt-2">User Name :</h6>
+            <p class="col-md-4 ps-2 mb-2 mt-2 pChange" id="userNameContent"></p>
+            <input id="userNameInput" class="col-md-4 d-none inputChange">
+          </div>
+          <div class="row border-bottom d-flex align-items-center">
+            <h6 class="col-md-4 mb-2 mt-2">Bio :</h6>
+            <p class="col-md-4 ps-2 mb-2 mt-2 pChange" id="bioContent"></p>
+            <input id="bioInput" class="col-md-4 d-none inputChange">
+          </div>
+          <div class="row border-bottom d-flex align-items-center">
+            <h6 class="col-md-4 mb-2 mt-2">Email :</h6>
+            <span class="col-md-4 ps-2 mb-2 mt-2" id="emailContent"></span>
+          </div>
+          <div class="row border-bottom d-flex align-items-center pb-2">
+            <h6 class="col-md-4 mb-2 mt-2">password :</h6>
+            <a id="changePassword" href="change-password.html" class="col-md-8 ps-2">click here to change password</a>
+          </div>
+          <div class="row border-bottom d-flex align-items-center">
+            <h6 class="col-md-4 mb-2 mt-2">Phone Number :</h6>
+            <p class="col-md-4 ps-2 mb-2 mt-2 pChange" id="phoneContent"></p>
+            <input id="phoneInput" class="col-md-4 d-none inputChange">
+          </div>
+          <div class="row border-bottom d-flex align-items-center">
+            <h6 class="col-md-4 mb-2 mt-2">Status :</h6>
+            <span class="col-md-4 ps-2 mb-2 mt-2" id="statusContent"></span>
+          </div>
+          <div class="row border-bottom d-flex align-items-center">
+            <h6 class="col-md-4 mb-2 mt-2">Role :</h6>
+            <span class="col-md-4 spans-2 mb-2 mt-2" id="roleContent"></span>
+          </div>
+          <div class="row border-bottom d-flex align-items-center">
+            <h6 class="col-md-4 mb-2 mt-2">Gender :</h6>
+            <p class="col-md-4 ps-2 mb-2 mt-2" id="genderContent"></p>
+            <!-- <input id="genderInput" class="col-md-4 d-none"> -->
+          </div>
+          <div class="row pb-2 d-flex align-items-center">
+            <h6 class="col-md-4 mb-2 mt-2">Age :</h6>
+            <p class="col-md-4 ps-2 mb-2 mt-2 pChange" id="ageContent"></p>
+            <input id="ageInput" class="col-md-4 d-none inputChange">
+          </div>
+          
+        </div>
+  
+      <div class="pb-3">
+        <button id="editProfile" class="btn btn-dark mt-4">Edit Profile</button>
+        <button id="editProfile" class="btn btn-dark mt-4"  onclick="window.location.href = 'change-password.html'">Change Password</button>
+        <button id="saveChanges" class="d-none">Save Changes</button>
+      <button id="deactivate" class="btn btn-danger mt-4">Deactivate</button>
+      </div>
+      </div>
+    
+  </div>
+
+  
+  <script src="./node_modules/jwt-decode/build/jwt-decode.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"></script>
+
+  <!-- font awsome -->    
+  <script src="https://kit.fontawesome.com/fa5eb8b642.js" crossorigin="anonymous"></script>
+
+  <!-- axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- socket io -->
+  <script src="./node_modules/socket.io/client-dist/socket.io.min.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+
+</html>
+

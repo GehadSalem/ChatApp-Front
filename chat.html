@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat</title>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/all.min.css">
+        <!-- bootstrape -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/chat.css">
+		
+	</head>
+	
+	<body>
+        <!-- navebar -->
+        <nav class="navbar bg-body-tertiary">
+            <div class="container w-75">
+                <a class="navbar-brand me-0">Let's Chat</a>
+                <div class="d-flex justify-content-end align-items-center usersPosition" role="search">
+                    
+                    <div class="border rounded-2 d-flex p-2 ms-4">
+                        <div class="text-end">
+                            <a class="nav-link me-3" aria-current="page" href="profile.html" id="firstName"></a>
+                            <a class="nav-link me-3" aria-current="page" href="profile.html" id="userName"></a>
+                        </div>
+                        <img alt="avatar" id="userPic" class="rounded-circle profile-pic border">
+                    </div>
+
+                    <div class="ms-4" id="toggelUsersList">
+                        <i class="fa-solid fa-users"></i>
+                        <div class="listNone" id="usersList">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+
+        <!--Coded With Love By Mutiullah Samim-->
+		<div class="container">
+            <div class="row pt-3 clearfix">
+                
+                <div class="col-md-10 card chat-app">
+                    <div id="plist" class="people-list">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-search"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search..." id="searchinput">
+                        </div>
+                        
+                        <ul id="chatUsers" class="list-unstyled chat-list mt-2 mb-0">
+                            
+                        </ul>
+                    </div>
+                    <div class="chat">
+                        <div class="chat-header clearfix">
+                            <div class="row">
+                                <div class="col-md-6 d-flex align-items-center" id="displayChatName">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-history">
+                            <ul class="m-b-0" id="messageList">
+                                
+                            </ul>
+                        </div>
+                        <div class="chat-message clearfix">
+                            <div class="input-group mb-0">
+                                
+                                <input type="text" class="form-control" placeholder="Enter text here..." id="messageBody">                              <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa-solid fa-paper-plane" id="sendMessage"></i></span>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./node_modules/jwt-decode/build/jwt-decode.js"></script>
+        <!-- jQuery -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <!-- bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!-- socket io -->
+        <script src="./node_modules/socket.io/client-dist/socket.io.min.js"></script>
+        <script src="./js/chat.js"></script>
+	</body>
+</html>
